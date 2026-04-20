@@ -1,7 +1,7 @@
 # AWS Account Setup Lab - Solution
 
-**Student Name:** [Your Name]  
-**Date Completed:** [Date]
+**Student Name:** Guangzheng Li
+**Date Completed:** 20/04/2026
 
 ---
 
@@ -11,9 +11,9 @@
 ![MFA Enabled](screenshots/mfa-enabled.png)
 
 ### Notes:
-- Authenticator app used: [Google Authenticator / Microsoft Authenticator / Authy]
-- MFA setup completed successfully: [Yes / No]
-- Backup codes saved: [Yes / No]
+- Authenticator app used: Passkey or security key（iPhone）
+- MFA setup completed successfully: Yes 
+- Backup codes saved: N/A (Not provided by AWS for Virtual MFA)
 
 ---
 
@@ -31,8 +31,8 @@
 ![SNS Confirmed](screenshots/sns-confirmed.png)
 
 ### Configuration Details:
-- Alert threshold: $[amount]
-- Email confirmed: [Yes / No]
+- Alert threshold: $10
+- Email confirmed: Yes
 - Additional thresholds created (bonus): [Yes / No - if yes, list amounts]
 
 ---
@@ -43,9 +43,9 @@
 ![Account Alias](screenshots/account-alias.png)
 
 ### Account Details:
-- **Account Alias:** [your-alias-here]
-- **Sign-In URL:** `https://[your-alias].signin.aws.amazon.com/console`
-- **Tested successfully:** [Yes / No]
+- **Account Alias:** muzixiaowuwuyi-user1
+- **Sign-In URL:** `https://047612973365.signin.aws.amazon.com/console`
+- **Tested successfully:** Yes
 
 ---
 
@@ -58,13 +58,16 @@
 
 | Service | Current Usage | Free Tier Limit | Status |
 |---------|--------------|-----------------|--------|
-| EC2 | [X hours / 750 hours] | 750 hours/month | [Green/Yellow/Red] |
-| S3 | [X GB / 5 GB] | 5 GB | [Green/Yellow/Red] |
+| EC2 | [0 hours / 750 hours] | 750 hours/month | Green |
+| S3 | [0 GB / 5 GB] | 5 GB | Green|
 | [Other services...] | | | |
 
+<!-- As of the time of this screenshot, Amazon EC2 and Amazon S3 do not appear in the 'Offers in use' list because no active resources (such as running instances or storage buckets) have been created yet. The dashboard only tracks services with recorded usage. I have manually entered '0' for these services in the table to reflect their current status. -->
+
+
 ### Notes:
-- Any services approaching limits? [Yes / No - if yes, which ones?]
-- Any unexpected usage? [Yes / No - if yes, describe]
+- Any services approaching limits? No
+- Any unexpected usage? No
 
 ---
 
@@ -73,43 +76,48 @@
 ### 1. Why is MFA important even for a personal learning account?
 
 **Your Answer:**
-[Write your answer here. Consider: What could happen if someone gained access to your account? What damage could they do? What costs could they incur?]
+MFA adds a critical layer of security by requiring a physical device for verification. This prevents unauthorized access even if your password is leaked or weak, protecting you from unexpected AWS bills caused by account compromise.
 
 ---
 
 ### 2. What would happen if you left your root user unprotected?
 
 **Your Answer:**
-[Write your answer here. Think about: What access does root user have? What could an attacker do? How would you recover?]
+An unprotected Root user gives attackers full administrative control, leading to potential data breaches and the exposure of all IAM user credentials. Most critically, it risks massive financial loss if attackers launch high-cost resources for malicious activities like crypto-mining under your name.
 
 ---
 
 ### 3. How do billing alerts help prevent unexpected charges?
 
 **Your Answer:**
-[Write your answer here. Consider: When do you get notified? What actions can you take? Why is proactive monitoring important?]
+Billing alerts act as an early warning system by notifying you via email when costs exceed your predefined threshold. This allows you to identify misconfigured resources or potential security breaches immediately, enabling you to stop the usage and minimize financial loss before the month ends.
 
 ---
 
 ### 4. What threshold did you set for your billing alert and why?
 
 **Your Answer:**
-[Write your answer here. Explain: Why did you choose this amount? Is it appropriate for your usage? Would you set multiple thresholds?]
+I set the threshold at $10 as required by the exercise to trigger a CloudWatch Billing Alarm. This value serves as a safe baseline for a learning environment, providing an early warning to investigate any unexpected usage before significant costs accumulate.
 
 ---
 
 ### 5. What is your account alias and why did you choose it?
 
 **Your Answer:**
-- **Alias:** [your-alias]
-- **Reasoning:** [Why did you choose this name? What makes it memorable and professional?]
+- **Alias:**  muzixiaowuwuyi-user1
+- **Reasoning:** I used a combination of my email name and "user1" as my account alias. I chose this format to simulate a real-world production environment where distinct aliases are often required to identify and manage multiple users or specific sub-accounts within an organization.
 
 ---
 
 ### 6. What services are you currently using according to the Free Tier dashboard?
 
 **Your Answer:**
-[List the services you're using and their current usage levels. Are you surprised by any usage?]
+AWS Service Catalog
+AWS Key Management Service
+AWS Glue
+Amazon Simple Queue Service
+Amazon Simple Notification Service
+Amazon Simple Notification Service
 
 ---
 
